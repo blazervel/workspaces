@@ -1,0 +1,39 @@
+{
+  "name": "blazervel/package-slug",
+  "description": "Package description",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Joshua Anderton",
+          "email": "hey@joshuaanderton.ca"
+      }
+  ],
+  "require": {
+      "php": "^8.0",
+      "illuminate/support": "^8.67|^9.0",
+      "phpstan/phpstan": "^1.7"
+  },
+  "require-dev": {
+      "phpunit/phpunit": "^9.3"
+  },
+  "autoload": {
+      "psr-4": {
+          "Blazervel\\PackageClassName\\": "src"
+      }
+  },
+  "autoload-dev": {
+      "psr-4": {
+          "Blazervel\\PackageClassName\\Tests\\": "tests"
+      }
+  },
+  "config": {
+      "sort-packages": true
+  },
+  "extra": {
+      "laravel": {
+          "providers": [
+              "Blazervel\\PackageClassName\\Providers\\ServiceProvider"
+          ]
+      }
+  }
+}
