@@ -1,6 +1,6 @@
 <?php
 
-namespace Blazervel\PackageClassName\Providers;
+namespace Blazervel\Workspaces\Providers;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
@@ -20,7 +20,7 @@ class ServiceProvider extends BaseServiceProvider
   private function loadViews()
   {
     $this->loadViewsFrom(
-      "{$this->pathTo}/resources/views", 'blazervel'
+      "{$this->pathTo}/resources/views", 'blazervel-workspaces'
     );
   }
   
@@ -35,14 +35,14 @@ class ServiceProvider extends BaseServiceProvider
   {
     $this->loadTranslationsFrom(
       "{$this->pathTo}/lang", 
-      'blazervel'
+      'blazervel-workspaces'
     );
   }
 
   private function loadConfig()
   {
     $this->publishes([
-      "{$this->pathTo}/config/package-slug.php" => config_path('package-slug.php'),
+      "{$this->pathTo}/config/blazervel_workspaces.php" => config_path('blazervel_workspaces.php'),
     ]);
   }
 

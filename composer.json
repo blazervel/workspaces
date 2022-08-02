@@ -1,6 +1,6 @@
 {
-  "name": "blazervel/package-slug",
-  "description": "Package description",
+  "name": "blazervel/workspaces",
+  "description": "Workspaces feature and utilities for Blazervel ecosystem.",
   "license": "MIT",
   "authors": [
       {
@@ -11,6 +11,7 @@
   "require": {
       "php": "^8.0",
       "illuminate/support": "^8.67|^9.0",
+      "blazervel/ui": "dev-master",
       "phpstan/phpstan": "^1.7"
   },
   "require-dev": {
@@ -18,12 +19,12 @@
   },
   "autoload": {
       "psr-4": {
-          "Blazervel\\PackageClassName\\": "src"
+          "Blazervel\\Workspaces\\": "src"
       }
   },
   "autoload-dev": {
       "psr-4": {
-          "Blazervel\\PackageClassName\\Tests\\": "tests"
+          "Blazervel\\Workspaces\\Tests\\": "tests"
       }
   },
   "config": {
@@ -32,7 +33,7 @@
   "extra": {
       "laravel": {
           "providers": [
-              "Blazervel\\PackageClassName\\Providers\\ServiceProvider"
+              "Blazervel\\Workspaces\\Providers\\ServiceProvider"
           ]
       }
   }

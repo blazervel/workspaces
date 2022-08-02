@@ -1,8 +1,8 @@
 <?php
 
-namespace Blazervel\PackageClassName\Tests\Feature;
+namespace Blazervel\Workspaces\Tests\Feature;
 
-use Blazervel\PackageClassName\Tests\TestCase;
+use Blazervel\Workspaces\Tests\TestCase;
 
 class ExampleTest extends TestCase
 {

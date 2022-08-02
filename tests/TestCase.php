@@ -1,6 +1,6 @@
 <?php
 
-namespace Blazervel\PackageClassName\Tests;
+namespace Blazervel\Workspaces\Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
