@@ -7,6 +7,11 @@ use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 class ServiceProvider extends BaseServiceProvider 
 {
   private string $pathTo = __DIR__ . '/../..';
+
+  public function register()
+  {
+    //
+  }
   
   public function boot()
   {

@@ -18,7 +18,7 @@ class Index extends Action
     $workspaces = $request->user()->workspaces()->get();
     $workspaceUsers = User::join('workspace_users', 'users.id', 'workspace_users.user_id')
                           ->whereIn('workspace_id', $workspaces->pluck('id')->all())
-                          ->select('workspace_users.workspace_id', 'users.first_name', 'users.last_name', 'users.profile_image_url')
+                          // ->select('workspace_users.workspace_id', 'users.name', 'users.profile_image_url')
                           ->get();
 
     return Inertia::render('Workspaces/List', [

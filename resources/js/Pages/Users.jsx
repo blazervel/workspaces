@@ -1,0 +1,16 @@
+import { Head } from '@inertiajs/inertia-react'
+
+export default function Users({stripeConnector, name, ...props}) {
+  return (
+    <Sidebar 
+      heading="Team"
+      navigation={props.navigation}
+    >
+
+      <Head title="Team"/>
+
+      <p>Here are your team members!</p>
+
+    </Sidebar>
+  )
+}
