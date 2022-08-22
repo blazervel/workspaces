@@ -9,11 +9,11 @@ use Inertia\{
 };
 use Blazervel\Feature\Action;
 
-class Index extends Action
+class Create extends Action
 {
   public function handle(Workspace $workspace): Response
   {
-    return Inertia::render('Workspaces/Users/List', [
+    return Inertia::render('Workspaces/Users/Create', [
       'workspace' => $workspace,
       'users' => $workspace->users()->get()
     ]);
