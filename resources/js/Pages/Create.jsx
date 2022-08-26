@@ -1,7 +1,6 @@
-import { useEffect } from 'preact/compat'
 import { Dashboard } from '@blazervel/components'
 import { ButtonPrimary, Input, Label, ValidationErrors, Link } from '@blazervel/components'
-import { Head, useForm } from '@inertiajs/inertia-react'
+import { Head, useForm } from '@appModules/@inertiajs/inertia-react'
 
 export default function () {
   const { data, setData, post, processing, errors, reset } = useForm({

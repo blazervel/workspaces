@@ -1,4 +1,4 @@
-import { Head } from '@inertiajs/inertia-react'
+import { Head } from '@appModules/@inertiajs/inertia-react'
 
 export default function ({stripeConnector, name, ...props}) {
   return (
