@@ -21,7 +21,7 @@ class Index extends Action
                           // ->select('workspace_users.workspace_id', 'users.name', 'users.profile_image_url')
                           ->get();
 
-    return Inertia::render('Workspaces/List', [
+    return Inertia::render('@blazervelWorkspaces/Pages/List', [
       'workspaces' => $workspaces,
       'users' => $workspaceUsers
     ]);

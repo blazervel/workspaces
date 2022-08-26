@@ -1,6 +1,6 @@
 import { IndexLayout } from '@blazervel/components'
 
-export default function List({ workspaces }) {
+export default function ({ workspaces }) {
 
   const createRoute = route('workspaces.create')
 

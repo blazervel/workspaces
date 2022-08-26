@@ -3,7 +3,7 @@ import { Dashboard } from '@blazervel/components'
 import { ButtonPrimary, Input, Label, ValidationErrors, Link } from '@blazervel/components'
 import { Head, useForm } from '@inertiajs/inertia-react'
 
-export default function Create() {
+export default function () {
   const { data, setData, post, processing, errors, reset } = useForm({
     name: '',
   })
