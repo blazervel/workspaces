@@ -13,7 +13,7 @@ class Index extends Action
 {
   public function handle(Workspace $workspace): Response
   {
-    return Inertia::render('@blazervelWorkspaces/Pages/Users/List', [
+    return Inertia::render('@blazervelWorkspaces/Pages/Users/Index', [
       'workspace' => $workspace,
       'users' => $workspace->users()->get()
     ]);
