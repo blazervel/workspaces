@@ -3,19 +3,17 @@
 namespace Blazervel\Workspaces\Features\Workspaces\Users;
 
 use App\Models\Workspace;
-use Inertia\{
-  Inertia,
-  Response
-};
 use Blazervel\Feature\Action;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class Index extends Action
 {
-  public function handle(Workspace $workspace): Response
-  {
-    return Inertia::render('@blazervelWorkspaces/Pages/Users/Index', [
-      'workspace' => $workspace,
-      'users' => $workspace->users()->get()
-    ]);
-  }
+    public function handle(Workspace $workspace): Response
+    {
+        return Inertia::render('@blazervelWorkspaces/Pages/Users/Index', [
+            'workspace' => $workspace,
+            'users' => $workspace->users()->get(),
+        ]);
+    }
 }
