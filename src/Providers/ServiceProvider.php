@@ -24,7 +24,8 @@ class ServiceProvider extends BaseServiceProvider
     private function loadViews()
     {
         $this->loadViewsFrom(
-            "{$this->pathTo}/resources/views", 'blazervel-workspaces'
+            "{$this->pathTo}/resources/views",
+            'blazervel-workspaces'
         );
     }
 

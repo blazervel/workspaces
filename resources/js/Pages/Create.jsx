@@ -1,4 +1,4 @@
-import { Dashboard } from '@blazervel/components'
+import { AppLayout } from '@blazervel/components'
 import { ButtonPrimary, Input, Label, ValidationErrors, Link } from '@blazervel/components'
 import { Head, useForm } from '@appModules/@inertiajs/inertia-react'
 
@@ -18,7 +18,7 @@ export default function () {
   }
 
   return (
-    <Dashboard>
+    <AppLayout>
       <Head title="Create Workspace" />
 
       <ValidationErrors errors={errors} />
@@ -45,6 +45,6 @@ export default function () {
         </div>
 
       </form>
-    </Dashboard>
+    </AppLayout>
   )
 }
