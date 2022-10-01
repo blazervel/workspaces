@@ -18,8 +18,7 @@ export default function () {
   }
 
   return (
-    <AppLayout>
-      <Head title="Create Workspace" />
+    <AppLayout pageTitle={lang('blazervelWorkspaces::workspaces.create')}>
 
       <ValidationErrors errors={errors} />
 

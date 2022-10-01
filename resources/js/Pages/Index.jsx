@@ -6,8 +6,8 @@ export default function ({ workspaces }) {
 
   return (
     <IndexLayout
-      pageTitle={lang('workspaces.workspaces')}
-      pageActions={[{route: createRoute, text: lang('workspaces.add_workspace'), primary: true}]}
+      pageTitle={lang('blazervelWorkspaces::workspaces.workspaces')}
+      pageActions={[{route: createRoute, text: lang('blazervelWorkspaces::workspaces.add_workspace'), primary: true}]}
       items={workspaces}
       itemsNoneFoundRoute={createRoute}
       itemRoute={(item) => route('workspaces.show', {workspace: item.uuid})}

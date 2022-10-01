@@ -1,19 +1,19 @@
 <?php
 
-namespace Blazervel\Workspaces\Features\Workspaces\Users;
+namespace Blazervel\Workspaces\Features\Workspaces\Users\Invites;
 
 use App\Models\Workspace;
 use Blazervel\Feature\Action;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class Create extends Action
+class Index extends Action
 {
     public function handle(Workspace $workspace): Response
     {
-        return Inertia::render('@blazervelWorkspaces/Pages/Users/Create', [
+        return Inertia::render('@blazervelWorkspaces/Pages/Users/Invites/Index', [
             'workspace' => $workspace,
-            'users' => $workspace->users()->get(),
+            'invites' => $workspace->invites()->get(),
         ]);
     }
 }

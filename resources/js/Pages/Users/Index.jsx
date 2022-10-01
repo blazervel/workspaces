@@ -1,16 +1,19 @@
-import { Head } from '@appModules/@inertiajs/inertia-react'
+import { IndexLayout } from '@blazervel/components'
 
-export default function ({stripeConnector, name, ...props}) {
+export default function ({ workspace, users }) {
+
+  const createRoute = '' //route('workspaces.users.invite')
+
   return (
-    <Sidebar 
-      heading="Team"
-      navigation={props.navigation}
-    >
-
-      <Head title="Team"/>
-
-      <p>Here are your team members!</p>
-
-    </Sidebar>
+    <IndexLayout
+      pageTitle={lang('blazervelWorkspaces::users.users')}
+      pageActions={[
+        {route: route('workspaces.users.invites.index', {workspace: workspace.uuid}), text: lang('blazervelWorkspaces::users.invites'), primary: false},
+        {route: route('workspaces.users.invites.index', {workspace: workspace.uuid}), text: lang('blazervelWorkspaces::users.invite_user'), primary: true}
+      ]}
+      items={users}
+      itemsNoneFoundRoute={createRoute}
+      itemRoute={(item) => route('workspaces.users.edit', {workspace: workspace.uuid, user: item})}
+    />
   )
 }

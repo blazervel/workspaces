@@ -2,6 +2,9 @@
 
 namespace Blazervel\Workspaces\Providers;
 
+use Blazervel\Workspaces\Listeners\AssignRegisteredUserToWorkspace;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
@@ -10,11 +13,18 @@ class ServiceProvider extends BaseServiceProvider
 
     public function register()
     {
-    //
+        //
     }
 
     public function boot()
     {
+        Event::listen(
+            Registered::class,
+            AssignRegisteredUserToWorkspace::class
+        );
+
+        //Fortify::createUsersUsing(CreateNewUser::class);
+
         $this->loadViews();
         $this->loadRoutes();
         $this->loadTranslations();
@@ -25,7 +35,7 @@ class ServiceProvider extends BaseServiceProvider
     {
         $this->loadViewsFrom(
             "{$this->pathTo}/resources/views",
-            'blazervel-workspaces'
+            'blazervelWorkspaces'
         );
     }
 
@@ -40,7 +50,7 @@ class ServiceProvider extends BaseServiceProvider
     {
         $this->loadTranslationsFrom(
             "{$this->pathTo}/lang",
-            'blazervel-workspaces'
+            'blazervelWorkspaces'
         );
     }
 
