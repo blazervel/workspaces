@@ -1,4 +1,4 @@
-import { IndexLayout } from '@blazervel/components'
+import { IndexLayout } from '@blazervel/ui/components'
 
 export default function ({ workspace, users }) {
 
@@ -6,10 +6,10 @@ export default function ({ workspace, users }) {
 
   return (
     <IndexLayout
-      pageTitle={lang('blazervelWorkspaces::users.users')}
+      pageTitle={lang('blazervel_workspaces::users.users')}
       pageActions={[
-        {route: route('workspaces.users.invites.index', {workspace: workspace.uuid}), text: lang('blazervelWorkspaces::users.invites'), primary: false},
-        {route: route('workspaces.users.invites.index', {workspace: workspace.uuid}), text: lang('blazervelWorkspaces::users.invite_user'), primary: true}
+        {route: route('workspaces.users.invites.index', {workspace: workspace.uuid}), text: lang('blazervel_workspaces::users.invites'), primary: false},
+        {route: route('workspaces.users.invites.index', {workspace: workspace.uuid}), text: lang('blazervel_workspaces::users.invite_user'), primary: true}
       ]}
       items={users}
       itemsNoneFoundRoute={createRoute}

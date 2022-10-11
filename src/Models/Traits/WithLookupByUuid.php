@@ -14,7 +14,7 @@ trait WithLookupByUuid
     protected static function booted()
     {
         static::creating(function ($model) {
-            $model->forceFill(['uuid' => (string) Str::orderedUuid()]);
+            $model->uuid = (string) Str::orderedUuid();
         });
     }
 }

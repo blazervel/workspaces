@@ -31,7 +31,7 @@ class Update extends Action
             'password' => Hash::make($request->password),
         ]);
 
-        $request->session()->flash('success', __('blazervelWorkspaces::users.user_updated_successfully'));
+        $request->session()->flash('success', __('blazervel_workspaces::users.user_updated_successfully'));
 
         return redirect()->route('workspaces.users.edit', $workspace);
     }

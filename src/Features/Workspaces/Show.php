@@ -11,16 +11,19 @@ class Show extends Action
 {
     public function handle(Request $request, Workspace $workspace): RedirectResponse
     {
-        $redirect = '/';
-
-        $request->user()->setCurrentWorkspace(
+        Workspace::setCurrent(
             workspace: $workspace
         );
 
-        if (class_exists($routeServiceProvider = 'App\Providers\RouteServiceProvider')) {
-            $redirect = $routeServiceProvider::HOME;
+        $request->session()->flash(
+            'success',
+            __('blazervel_workspaces::workspaces.switched_to_workspace', ['workspace_name' => $workspace->name])
+        );
+
+        if ($redirectTo = $request->redirect_url) {
+            return redirect()->to($redirectTo);
         }
 
-        return redirect()->to($redirect);
+        return redirect()->back();
     }
 }

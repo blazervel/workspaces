@@ -12,7 +12,7 @@ class Edit extends Action
 {
     public function handle(Workspace $workspace, User $user): Response
     {
-        return Inertia::render('@blazervelWorkspaces/Pages/Users/Edit', [
+        return Inertia::render('@blazervel/workspaces/Pages/Users/Edit', [
             'workspace' => $workspace,
             'user' => $user
         ]);

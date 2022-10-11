@@ -10,6 +10,6 @@ class Create extends Action
 {
     public function handle(): Response
     {
-        return Inertia::render('@blazervelWorkspaces/Pages/Create');
+        return Inertia::render('@blazervel/workspaces/Pages/Create');
     }
 }

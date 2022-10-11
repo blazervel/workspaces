@@ -26,7 +26,7 @@ class Accept extends Action
             'accepted_at' => Carbon::now()
         ]);
 
-        $request->session()->flash('success', __('blazervelWorkspaces::invites.youve_been_added_to_workspace', ['workspace_name' => $workspace->name]));
+        $request->session()->flash('success', __('blazervel_workspaces::invites.youve_been_added_to_workspace', ['workspace_name' => $workspace->name]));
 
         return redirect()->route('workspaces.show', $workspace);
     }

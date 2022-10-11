@@ -33,7 +33,7 @@ class WorkspaceUserInvited extends Notification // implements ShouldQueue
         $workspaceUserInvite = $notifiable;
         $invitedBy           = $workspaceUserInvite->invitedBy()->first();
         $workspace           = $workspaceUserInvite->workspace;
-        $tr                  = 'blazervelWorkspaces::invites';
+        $tr                  = 'blazervel_workspaces::invites';
 
         return (new MailMessage)
                     ->subject(

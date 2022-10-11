@@ -1,4 +1,4 @@
-import { IndexLayout } from '@blazervel/components'
+import { IndexLayout } from '@blazervel/ui/components'
 
 export default function ({ workspaces }) {
 
@@ -6,8 +6,8 @@ export default function ({ workspaces }) {
 
   return (
     <IndexLayout
-      pageTitle={lang('blazervelWorkspaces::workspaces.workspaces')}
-      pageActions={[{route: createRoute, text: lang('blazervelWorkspaces::workspaces.add_workspace'), primary: true}]}
+      pageTitle={lang('blazervel_workspaces::workspaces.workspaces')}
+      pageActions={[{route: createRoute, text: lang('blazervel_workspaces::workspaces.add_workspace'), primary: true}]}
       items={workspaces}
       itemsNoneFoundRoute={createRoute}
       itemRoute={(item) => route('workspaces.show', {workspace: item.uuid})}

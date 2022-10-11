@@ -14,7 +14,7 @@ class Destroy extends Action
     {
         $workspaceUserInvite->delete();
 
-        $request->session()->flash('success', __('blazervelWorkspaces::invites.invite_canceled_successfully'));
+        $request->session()->flash('success', __('blazervel_workspaces::invites.invite_canceled_successfully'));
 
         return redirect()->route('workspaces.users.invites.index', $workspace);
     }

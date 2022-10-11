@@ -1,5 +1,5 @@
-import { AppLayout } from '@blazervel/components'
-import { ButtonPrimary, Input, Label, ValidationErrors, Link } from '@blazervel/components'
+import { AppLayout } from '@blazervel/ui/components'
+import { ButtonPrimary, Input, Label, ValidationErrors, Link } from '@blazervel/ui/components'
 import { Head, useForm } from '@appModules/@inertiajs/inertia-react'
 
 export default function () {
@@ -18,7 +18,7 @@ export default function () {
   }
 
   return (
-    <AppLayout pageTitle={lang('blazervelWorkspaces::workspaces.create')}>
+    <AppLayout pageTitle={lang('blazervel_workspaces::workspaces.create')}>
 
       <ValidationErrors errors={errors} />
 

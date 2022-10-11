@@ -35,7 +35,7 @@ class ServiceProvider extends BaseServiceProvider
     {
         $this->loadViewsFrom(
             "{$this->pathTo}/resources/views",
-            'blazervelWorkspaces'
+            'blazervel_workspaces'
         );
     }
 
@@ -50,7 +50,7 @@ class ServiceProvider extends BaseServiceProvider
     {
         $this->loadTranslationsFrom(
             "{$this->pathTo}/lang",
-            'blazervelWorkspaces'
+            'blazervel_workspaces'
         );
     }
 

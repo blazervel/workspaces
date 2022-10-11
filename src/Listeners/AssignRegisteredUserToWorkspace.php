@@ -25,7 +25,7 @@ class AssignRegisteredUserToWorkspace
         $workspaceModelClass = $this->workspaceModelClass();
         
         $workspace = $workspaceModelClass::create([
-            'name' => __('blazervelWorkspaces::workspaces.users_workspace', [
+            'name' => __('blazervel_workspaces::workspaces.users_workspace', [
                 'name_possessive' => $workspaceModelClass::workspaceNameFromUserName($user)
             ]),
         ]);
