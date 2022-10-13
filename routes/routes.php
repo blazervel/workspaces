@@ -16,9 +16,9 @@ Route::middleware(['web', 'auth'])->group(function () {
             Route::get( '{workspace}', Workspaces\Show::class  )->name('workspaces.show');
 
             Route::prefix('{workspace}/users')->group(function () {
-                Route::get('{user}/edit', Workspaces\Users\Edit::class  )->name('workspaces.users.edit');
-                Route::get('/',           Workspaces\Users\Index::class )->name('workspaces.users.index');
-                Route::put('{user}',      Workspaces\Users\Update::class)->name('workspaces.users.update');
+                Route::get('{user}/edit', Workspaces\Users\Edit::class     )->name('workspaces.users.edit');
+                Route::get('/',           Workspaces\Users\Index::class    )->name('workspaces.users.index');
+                Route::put('{user}',      Workspaces\Users\Update::class   )->name('workspaces.users.update');
                 
                 Route::prefix('invites')->group(function () {
                     Route::get(   '/',                     Workspaces\Users\Invites\Index::class  )->name('workspaces.users.invites.index');

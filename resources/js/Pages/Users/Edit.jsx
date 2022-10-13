@@ -2,17 +2,10 @@ import { EditLayout } from '@blazervel/ui/components'
 
 export default function ({ workspace, user, auth }) {
   
-  let fields = [
+  const fields = [
     {name: 'name',  default: user.name,  label: lang('blazervel_workspaces::users.name'),  type: 'text',     required: true},
     {name: 'email', default: user.email, label: lang('blazervel_workspaces::users.email'), type: 'email',    required: true},
   ]
-  
-  if (auth.user.id === user.id) {
-    fields = fields.concat([
-      {name: 'password',              default: '', label: lang('blazervel_workspaces::users.password'),         type: 'password', required: true},
-      {name: 'password_confirmation', default: '', label: lang('blazervel_workspaces::users.confirm_password'), type: 'password', required: true},
-    ]);
-  }
 
   return (
     <EditLayout
