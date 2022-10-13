@@ -14,7 +14,7 @@ class Index extends Action
     {
         return Inertia::render('@blazervel/workspaces/Pages/Users/Index', [
             'workspace' => $workspace,
-            'users' => $workspace->users()->where('id', '!=', $request->user()->id)->get(),
+            'users' => $workspace->users()->whereNotIn('users.id', [$request->user()->id])->get(),
         ]);
     }
 }
