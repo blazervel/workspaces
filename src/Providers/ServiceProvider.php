@@ -9,7 +9,7 @@ use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
 {
-    private string $pathTo = __DIR__.'/../..';
+    private string $path = __DIR__ . '/../..';
 
     public function register()
     {
@@ -34,7 +34,7 @@ class ServiceProvider extends BaseServiceProvider
     private function loadViews()
     {
         $this->loadViewsFrom(
-            "{$this->pathTo}/resources/views",
+            "{$this->path}/resources/views",
             'blazervel_workspaces'
         );
     }
@@ -42,14 +42,14 @@ class ServiceProvider extends BaseServiceProvider
     private function loadRoutes()
     {
         $this->loadRoutesFrom(
-            "{$this->pathTo}/routes/routes.php"
+            "{$this->path}/routes/routes.php"
         );
     }
 
     private function loadTranslations()
     {
         $this->loadTranslationsFrom(
-            "{$this->pathTo}/lang",
+            "{$this->path}/lang",
             'blazervel_workspaces'
         );
     }
@@ -57,7 +57,7 @@ class ServiceProvider extends BaseServiceProvider
     private function loadMigrations()
     {
         $this->loadMigrationsFrom(
-            "{$this->pathTo}/database/migrations"
+            "{$this->path}/database/migrations"
         );
     }
 }
