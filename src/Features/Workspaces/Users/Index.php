@@ -12,9 +12,13 @@ class Index extends Action
 {
     public function handle(Request $request, Workspace $workspace): Response
     {
+        $users = $workspace
+                    ->users()
+                    ->where('users.id', '!=', $request->user()->id);
+
         return Inertia::render('@blazervel/workspaces/Pages/Users/Index', [
             'workspace' => $workspace,
-            'users' => $workspace->users()->whereNotIn('users.id', [$request->user()->id])->get(),
+            'users' => $users->get(),
         ]);
     }
 }
