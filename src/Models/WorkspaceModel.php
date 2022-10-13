@@ -32,23 +32,12 @@ class WorkspaceModel extends Model
         });
     }
 
-    static function workspaceNameFromUserName(User $user): string
+    public function setCurrent(): void
     {
-        $firstName = $user->first_name ?? explode(' ', $user->name)[0];
-        $endsWithS = Str::endsWith(Str::lower($firstName), 's');
-        $userFirstNamePossessive = implode('', [$firstName, "'", $endsWithS ? '' : 's']);
-
-        return $userFirstNamePossessive;
+        Cookie::queue('current_workspace_id', $this->id, 1000);
     }
 
-    static function setCurrent(self|int $workspace): void
-    {
-        $workspaceId = is_int($workspace) ? $workspace : $workspace->id;
-
-        Cookie::queue('current_workspace_id', $workspaceId, 1000);
-    }
-
-    static function current(): self|null
+    public static function current(): self|null
     {
         $workspace = null;
 
@@ -61,6 +50,15 @@ class WorkspaceModel extends Model
         }
 
         return $workspace ?: $user->workspaces()->first();
+    }
+
+    static function workspaceNameFromUserName(User $user): string
+    {
+        $firstName = $user->first_name ?? explode(' ', $user->name)[0];
+        $endsWithS = Str::endsWith(Str::lower($firstName), 's');
+        $userFirstNamePossessive = implode('', [$firstName, "'", $endsWithS ? '' : 's']);
+
+        return $userFirstNamePossessive;
     }
 
     public function users(): BelongsToMany

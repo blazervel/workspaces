@@ -3,7 +3,7 @@
 namespace Blazervel\Workspaces\Features\Workspaces;
 
 use App\Models\Workspace;
-use Blazervel\Feature\Action;
+use Blazervel\Features\Action;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
@@ -11,9 +11,7 @@ class Show extends Action
 {
     public function handle(Request $request, Workspace $workspace): RedirectResponse
     {
-        Workspace::setCurrent(
-            workspace: $workspace
-        );
+        $workspace->setCurrent();
 
         $request->session()->flash(
             'success',

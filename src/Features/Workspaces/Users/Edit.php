@@ -4,7 +4,7 @@ namespace Blazervel\Workspaces\Features\Workspaces\Users;
 
 use App\Models\Workspace;
 use App\Models\User;
-use Blazervel\Feature\Action;
+use Blazervel\Features\Action;
 use Inertia\Inertia;
 use Inertia\Response;
 

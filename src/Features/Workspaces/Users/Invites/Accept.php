@@ -7,7 +7,7 @@ use Blazervel\Workspaces\Models\WorkspaceUserInviteModel;
 use Carbon\Carbon;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Blazervel\Feature\Action;
+use Blazervel\Features\Action;
 
 class Accept extends Action
 {
