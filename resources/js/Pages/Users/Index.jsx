@@ -13,7 +13,7 @@ export default function ({ workspace, users }) {
       ]}
       items={users}
       itemsNoneFoundRoute={createRoute}
-      itemRoute={(item) => route('workspaces.users.edit', {workspace: workspace.uuid, user: item})}
+      itemRoute={(item) => route('workspaces.users.edit', {workspace: workspace.uuid, user: item.uuid})}
     />
   )
 }
