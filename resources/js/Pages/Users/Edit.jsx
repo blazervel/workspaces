@@ -3,8 +3,8 @@ import { EditLayout } from '@blazervel/ui/components'
 export default function ({ workspace, user, auth }) {
   
   const fields = [
-    {name: 'name',  default: user.name,  label: lang('blazervel_workspaces::users.name'),  type: 'text',     required: true},
-    {name: 'email', default: user.email, label: lang('blazervel_workspaces::users.email'), type: 'email',    required: true},
+    {name: 'name',  value: user.name,  label: lang('blazervel_workspaces::users.name'),  type: 'text',     required: true},
+    {name: 'email', value: user.email, label: lang('blazervel_workspaces::users.email'), type: 'email',    required: true},
   ]
 
   return (

@@ -33,7 +33,7 @@ export default function ({ workspace, invites }) {
         <Form
           className="mt-6"
           route={route('workspaces.users.invites.send', {workspace: workspace.uuid})}
-          fields={[{name: 'email', default: '', label: lang('blazervel_workspaces::invites.email'), type: 'email', required: true}]}
+          fields={[{name: 'email', value: '', label: lang('blazervel_workspaces::invites.email'), type: 'email', required: true}]}
           resetOnSuccess={true}
           formSubmitButtonText={lang('blazervel_workspaces::invites.send')} />
       </Card>
