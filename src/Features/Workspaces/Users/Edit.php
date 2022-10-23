@@ -6,7 +6,7 @@ use App\Models\Workspace;
 use App\Models\User;
 use Inertia\Inertia;
 use Inertia\Response;
-use Blazervel\Features\Action;
+use Blazervel\Actions\Action;
 
 class Edit extends Action
 {

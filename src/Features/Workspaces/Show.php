@@ -3,7 +3,7 @@
 namespace Blazervel\Workspaces\Features\Workspaces;
 
 use App\Models\Workspace;
-use Blazervel\Features\Action;
+use Blazervel\Actions\Action;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 

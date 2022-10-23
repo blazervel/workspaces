@@ -3,7 +3,7 @@
 namespace Blazervel\Workspaces\Features\Workspaces\Users\Invites;
 
 use App\Models\Workspace;
-use Blazervel\Features\Action;
+use Blazervel\Actions\Action;
 use Inertia\Inertia;
 use Inertia\Response;
 

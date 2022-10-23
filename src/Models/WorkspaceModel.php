@@ -29,6 +29,7 @@ class WorkspaceModel extends Model
     {
         static::creating(function ($workspace) {
             $workspace->subdomain = Str::slug($workspace->name);
+            $workspace->uuid = (string) Str::orderedUuid();
         });
     }
 

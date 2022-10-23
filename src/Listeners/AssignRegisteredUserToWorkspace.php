@@ -32,7 +32,7 @@ class AssignRegisteredUserToWorkspace
 
         $workspace->users()->attach(
             $user->id,
-            ['role' => 'owner']
+            //['role' => 'owner']
         );
     }
 

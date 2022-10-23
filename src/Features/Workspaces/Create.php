@@ -2,7 +2,7 @@
 
 namespace Blazervel\Workspaces\Features\Workspaces;
 
-use Blazervel\Features\Action;
+use Blazervel\Actions\Action;
 use Inertia\Inertia;
 use Inertia\Response;
 
