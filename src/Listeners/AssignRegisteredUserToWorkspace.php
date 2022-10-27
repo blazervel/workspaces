@@ -2,7 +2,7 @@
 
 namespace Blazervel\Workspaces\Listeners;
 
-use Blazervel\Workspaces\Features\Workspaces\Users\Invites\Accept;
+use Blazervel\Workspaces\Actions\Workspaces\Users\Invites\Accept;
 use Blazervel\Workspaces\Models\WorkspaceModel;
 use Blazervel\Workspaces\Models\WorkspaceUserInviteModel;
 use Illuminate\Auth\Events\Registered;

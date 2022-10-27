@@ -1,5 +1,5 @@
 import { IndexLayout } from '@blazervel/ui/components'
-import { lang, route } from '@blazervel/actionsjs'
+import { lang, route } from '../utils'
 
 export default function ({ workspaces }) {
 

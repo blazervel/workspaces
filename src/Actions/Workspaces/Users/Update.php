@@ -1,6 +1,6 @@
 <?php
 
-namespace Blazervel\Workspaces\Features\Workspaces\Users;
+namespace Blazervel\Workspaces\Actions\Workspaces\Users;
 
 use App\Models\Workspace;
 use App\Models\User;

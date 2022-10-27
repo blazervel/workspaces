@@ -4,7 +4,7 @@ import {
   Card,
   SectionHeader
 } from '@blazervel/ui/components'
-import { lang, route } from '@blazervel/actionsjs'
+import { lang, route } from '../../../utils'
 
 export default function ({ workspace, invites }) {
 
@@ -35,7 +35,7 @@ export default function ({ workspace, invites }) {
           className="mt-6"
           route={route('workspaces.users.invites.send', {workspace: workspace.uuid})}
           fields={[{name: 'email', value: '', label: lang('blazervel_workspaces::invites.email'), type: 'email', required: true}]}
-          resetOnSuccess={true}
+          clearOnSuccess={true}
           formSubmitButtonText={lang('blazervel_workspaces::invites.send')} />
       </Card>
 

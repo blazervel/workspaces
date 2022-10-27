@@ -1,7 +1,7 @@
 import { AppLayout } from '@blazervel/ui/components'
-import { lang, route } from '@blazervel/actionsjs'
+import { lang, route } from '../utils'
 import { ButtonPrimary, Input, Label, ValidationErrors, Link } from '@blazervel/ui/components'
-import { Head, useForm } from '@appModules/@inertiajs/inertia-react'
+import { useForm } from '@appModules/@inertiajs/inertia-react'
 
 export default function () {
   const { data, setData, post, processing, errors, reset } = useForm({

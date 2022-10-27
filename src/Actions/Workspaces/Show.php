@@ -1,6 +1,6 @@
 <?php
 
-namespace Blazervel\Workspaces\Features\Workspaces;
+namespace Blazervel\Workspaces\Actions\Workspaces;
 
 use App\Models\Workspace;
 use Blazervel\Actions\Action;

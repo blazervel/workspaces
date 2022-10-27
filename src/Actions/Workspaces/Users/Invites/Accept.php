@@ -1,6 +1,6 @@
 <?php
 
-namespace Blazervel\Workspaces\Features\Workspaces\Users\Invites;
+namespace Blazervel\Workspaces\Actions\Workspaces\Users\Invites;
 
 use App\Models\Workspace;
 use Blazervel\Workspaces\Models\WorkspaceUserInviteModel;

@@ -10,5 +10,5 @@ return [
     'confirm_password' => 'Confirm Password',
     'invite_user' => 'Invite Team Member',
     'update' => 'Update',
-    'my-profile' => 'My Profile',
+    'my_profile' => 'My Profile',
 ];

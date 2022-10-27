@@ -1,6 +1,6 @@
 <?php
 
-use Blazervel\Workspaces\Features\Workspaces;
+use Blazervel\Workspaces\Actions\Workspaces;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['web', 'auth'])->group(function () {
