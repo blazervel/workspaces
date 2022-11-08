@@ -2,7 +2,7 @@
 
 namespace Blazervel\Workspaces\Models;
 
-use Blazervel\Actions\Casts\EnumArray;
+use Blazervel\Blazervel\Casts\EnumArray;
 use Illuminate\Database\Eloquent\Model;
 
 class WorkspaceUser extends Model

@@ -2,7 +2,7 @@
 
 namespace Blazervel\Workspaces\Actions\Workspaces;
 
-use Blazervel\Actions\Action;
+use Blazervel\Blazervel\Action;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 

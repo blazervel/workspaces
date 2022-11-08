@@ -3,7 +3,7 @@
 namespace Blazervel\Workspaces\Actions\Workspaces;
 
 use App\Models\Workspace;
-use Blazervel\Actions\Action;
+use Blazervel\Blazervel\Action;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
@@ -18,10 +18,6 @@ class Show extends Action
             __('blazervel_workspaces::workspaces.switched_to_workspace', ['workspace_name' => $workspace->name])
         );
 
-        if ($redirectTo = $request->redirect_url) {
-            return redirect()->to($redirectTo);
-        }
-
-        return redirect()->back();
+        return redirect()->route('workspaces.users.index', $workspace);
     }
 }

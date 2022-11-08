@@ -37,7 +37,7 @@ class WorkspaceUserInviteModel extends Model
     static function intendedUrlIsWorkspaceInviteAccept(): bool
     {
         $intendedUrl = Session::get('url.intended') ?: '';
-        $matchStrings = 'users/invites|accept|signature=';
+        $matchStrings = 'users/invites|accept'; //|signature=';
 
         return (
             Str::containsAll($intendedUrl, explode('|', $matchStrings))

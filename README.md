@@ -1,1 +1,1 @@
-# Eazy peezy Workspace/Team support for Blazervel
+# Workspace/Team Inertia with Blazervel (deprecated for Laravel Jetstream support)

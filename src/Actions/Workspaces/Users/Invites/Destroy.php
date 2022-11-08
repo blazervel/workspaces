@@ -5,7 +5,7 @@ namespace Blazervel\Workspaces\Actions\Workspaces\Users\Invites;
 use App\Models\Workspace;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Blazervel\Actions\Action;
+use Blazervel\Blazervel\Action;
 use Blazervel\Workspaces\Models\WorkspaceUserInviteModel;
 
 class Destroy extends Action

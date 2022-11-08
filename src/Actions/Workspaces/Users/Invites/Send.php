@@ -5,7 +5,7 @@ namespace Blazervel\Workspaces\Actions\Workspaces\Users\Invites;
 use App\Models\Workspace;
 use Illuminate\Support\Facades\Notification;
 use Blazervel\Workspaces\Notifications\WorkspaceUserInvited;
-use Blazervel\Actions\Action;
+use Blazervel\Blazervel\Action;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 

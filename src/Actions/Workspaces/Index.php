@@ -3,7 +3,7 @@
 namespace Blazervel\Workspaces\Actions\Workspaces;
 
 use App\Models\User;
-use Blazervel\Actions\Action;
+use Blazervel\Blazervel\Action;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -18,7 +18,7 @@ class Index extends Action
                               // ->select('workspace_users.workspace_id', 'users.name', 'users.gravatar_url')
                               ->get();
 
-        return Inertia::render('@blazervel/workspaces/Pages/Index', [
+        return Inertia::render('@blazervel-ui/workspaces/Pages/Index', [
             'workspaces' => $workspaces,
             'users' => $workspaceUsers,
         ]);

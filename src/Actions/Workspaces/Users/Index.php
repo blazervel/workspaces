@@ -3,7 +3,7 @@
 namespace Blazervel\Workspaces\Actions\Workspaces\Users;
 
 use App\Models\Workspace;
-use Blazervel\Actions\Action;
+use Blazervel\Blazervel\Action;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -16,7 +16,7 @@ class Index extends Action
                     ->users()
                     ->where('users.id', '!=', $request->user()->id);
 
-        return Inertia::render('@blazervel/workspaces/Pages/Users/Index', [
+        return Inertia::render('@blazervel-ui/workspaces/Pages/Users/Index', [
             'workspace' => $workspace,
             'users' => $users->get(),
         ]);

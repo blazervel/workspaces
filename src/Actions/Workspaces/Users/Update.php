@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Validation\Rules;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Blazervel\Actions\Action;
+use Blazervel\Blazervel\Action;
 use Illuminate\Support\Facades\Hash;
 
 class Update extends Action
