@@ -15,7 +15,7 @@ class Show extends Action
 
         $request->session()->flash(
             'success',
-            __('blazervel_workspaces::workspaces.switched_to_workspace', ['workspace_name' => $workspace->name])
+            __('workspaces.switched_to_workspace', ['workspace_name' => $workspace->name])
         );
 
         return redirect()->route('workspaces.users.index', $workspace);

@@ -3,6 +3,7 @@
 return [
     'workspace' => 'Workspace',
     'workspaces' => 'Workspaces',
+    'workspaces_plural' => 'Workspaces',
     'add_new' => 'Add New',
     'save' => 'Save',
     'name' => 'Name',
