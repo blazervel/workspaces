@@ -11,7 +11,9 @@ class Show extends Action
 {
     public function handle(Request $request, Workspace $workspace): RedirectResponse
     {
-        $workspace->setCurrent();
+        $request->user()->setCurrentWorkspace(
+            $workspace
+        );
 
         $request->session()->flash(
             'success',

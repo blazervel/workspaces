@@ -33,26 +33,6 @@ class WorkspaceModel extends Model
         });
     }
 
-    public function setCurrent(): void
-    {
-        Cookie::queue('current_workspace_id', $this->id, 1000);
-    }
-
-    public static function current(): self|null
-    {
-        $workspace = null;
-
-        if (!$user = Auth::user()) {
-            return null;
-        }
-        
-        if ($workspaceId = Cookie::get('current_workspace_id')) {
-            $workspace = $user->workspaces()->find($workspaceId);
-        }
-
-        return $workspace ?: $user->workspaces()->first();
-    }
-
     static function workspaceNameFromUserName(User $user): string
     {
         $firstName = $user->first_name ?? explode(' ', $user->name)[0];
