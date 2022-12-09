@@ -5,6 +5,7 @@ namespace Blazervel\Workspaces\Actions\Workspaces\Users\Invites;
 use App\Models\Workspace;
 use Blazervel\Workspaces\Models\WorkspaceUserInviteModel;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Blazervel\Blazervel\Action;
@@ -13,6 +14,11 @@ class Accept extends Action
 {
     public function handle(Request $request, Workspace $workspace, WorkspaceUserInviteModel $workspaceUserInvite): RedirectResponse
     {
+        if (!$request->user()) {
+            Session::put('url.intended', $request->getUri());
+            return redirect()->route('register');
+        }
+        
         $userId = $request->user()->id;
         
         // User may have already been added during registration

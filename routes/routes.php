@@ -34,9 +34,9 @@ Route::middleware(['web', 'auth'])->group(function () {
             });
         });
     });
-
-    Route::middleware('signed')->group(function () {
-        Route::get('workspaces/{workspace}/users/invites/{workspaceUserInvite}/accept', Workspaces\Users\Invites\Accept::class)->name('workspaces.users.invites.accept');
-    });
     
+});
+
+Route::middleware(['web', 'signed'])->group(function () {
+    Route::get('workspaces/{workspace}/users/invites/{workspaceUserInvite}/accept', Workspaces\Users\Invites\Accept::class)->name('workspaces.users.invites.accept');
 });
