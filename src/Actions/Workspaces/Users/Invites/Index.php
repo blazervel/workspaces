@@ -11,7 +11,7 @@ class Index extends Action
 {
     public function handle(Workspace $workspace): Response
     {
-        return Inertia::render('@blazervel-workspaces/Pages/Users/Invites/Index', [
+        return Inertia::render('Pages/Workspaces/Users/Invites/Index', [
             'workspace' => $workspace,
             'invites' => $workspace->invites()->get(),
         ]);

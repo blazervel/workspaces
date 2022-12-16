@@ -13,7 +13,7 @@ class Show extends Action
 {
     public function handle(Request $request, Workspace $workspace, User $user): Response
     {
-        return Inertia::render('@blazervel-workspaces/Pages/Users/Show', [
+        return Inertia::render('Pages/Workspaces/Users/Show', [
             'workspace' => $workspace,
             'user' => $user
         ]);

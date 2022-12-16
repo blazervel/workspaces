@@ -16,7 +16,7 @@ class Index extends Action
                     ->users()
                     ->where('users.id', '!=', $request->user()->id);
 
-        return Inertia::render('@blazervel-workspaces/Pages/Users/Index', [
+        return Inertia::render('Pages/Workspaces/Users/Index', [
             'workspace' => $workspace,
             'users' => $users->get(),
         ]);

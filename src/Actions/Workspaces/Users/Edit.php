@@ -14,7 +14,7 @@ class Edit extends Action
 {
     public function handle(Workspace $workspace, User $user): Response|RedirectResponse
     {
-        return Inertia::render('@blazervel-workspaces/Pages/Users/Edit', [
+        return Inertia::render('Pages/Workspaces/Users/Edit', [
             'workspace' => $workspace,
             'user' => $user
         ]);
